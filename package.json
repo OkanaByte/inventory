@@ -19,6 +19,8 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
+    "babel": "^6.23.0",
+    "cross-env": "^3.2.3",
     "vue-router": "^2.5.2"
   }
 }

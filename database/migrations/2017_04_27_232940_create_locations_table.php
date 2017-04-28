@@ -18,7 +18,7 @@ class CreateLocationsTable extends Migration
             $table->string('name');
             $table->string('lastLocation')->default('');
             $table->string('BU');
-            $table-string('OU');
+            $table->string('OU');
             $table->timestamps();
         });
     }
