@@ -1,13 +1,13 @@
 /**
- * Created by Darck on 27/04/2017.
+ * Created by Dark on 27/04/2017.
  */
-import Example from './components/Example.vue';
+import Brands from './components/Brands/index.vue';
 
 
 export default [
     {
-        path: '/',
-        component: Example,
-        name: 'example'
+        path: '/brands',
+        component: Brands,
+        name: 'brands'
     }
 ];

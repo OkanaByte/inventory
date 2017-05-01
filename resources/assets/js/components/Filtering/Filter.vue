@@ -5,9 +5,9 @@
                 <tr>
                     <th v-for="key in columns"
                         @click="sortBy(key)"
-                        :class="(active: sortKey == key)">
+                        :class="{active: sortKey == key}">
                         {{ key | capitalize}}
-                        <span class="arrow" :class="sortOrdes[key] > 0 ? 'asc' : 'dsc'">
+                        <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
 
                         </span>
                     </th>
@@ -34,25 +34,25 @@
             filterKey: String
         },
         data: function(){
-            var sortOrdes = {}
+            var sortOrders = {}
             this.columns.forEach(function(key){
-                sortOrdes[key] = 1
+                sortOrders[key] = 1
             })
             return{
                 sortKey: '',
-                sortOrders: sortOrdes
+                sortOrders: sortOrders
             }
         },
         computed:{
             filteredData: function () {
-                var sortKey = this.sortKeys
+                var sortKey = this.sortKey
                 var filterKey = this.filterKey && this.filterKey.toLowerCase()
-                var order = this.sortOrdes[sortKey] || 1
+                var order = this.sortOrders[sortKey] || 1
                 var data = this.data
                 if(filterKey){
                     data = data.filter(function(row){
                         return Object.keys(row).some(function(key){
-                            return String(row[key].toLowerCase().indexOf(filterKey) > -1 )
+                            return String(row[key]).toLowerCase().indexOf(filterKey) > -1
                         })
                     })
                 }
@@ -61,7 +61,7 @@
                         a = a[sortKey]
                         b = b[sortKey]
 
-                        return (a == b ? 0 : a > b ? 1 : -1) * order
+                        return (a === b ? 0 : a > b ? 1 : -1) * order
                     })
                 }
 
