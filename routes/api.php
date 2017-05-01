@@ -23,4 +23,4 @@ Route::resource('descriptions', 'Api\DescriptionControllers');
 Route::resource('locations', 'Api\LocationControllers');
 Route::resource('manufactures', 'Api\ManufactureControllers');
 Route::resource('products', 'Api\ProductControllers');
-Route::resource('tranfers', 'Api\TranferControllers');
+Route::resource('tranfers', 'Api\TransferControllers');

@@ -13,8 +13,8 @@ class Location extends Model
         return $this->hasMany(Product::class);
     }
 
-    public function tranfers()
+    public function transfers()
     {
-        return $this->hasMany(Tranfer::class);
+        return $this->hasMany(Transfer::class);
     }
 }

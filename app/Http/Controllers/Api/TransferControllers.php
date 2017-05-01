@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Api;
 
 
 use App\Http\Controllers\Controller;
-use App\Tranfer;
+use App\Transfer;
 use Illuminate\Http\Request;
 
-class TranferControllers extends Controller
+class TransferControllers extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +16,10 @@ class TranferControllers extends Controller
      */
     public function index()
     {
-        $tranfers = Tranfer::orderBy('created_at', 'desc')->get();
+        $transfers = Transfer::orderBy('created_at', 'desc')->get();
 
         return response()->json([
-            'tranfers' => $tranfers
+            'tranfers' => $transfers
         ]);
     }
 

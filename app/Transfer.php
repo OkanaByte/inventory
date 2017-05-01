@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tranfer extends Model
+class Transfer extends Model
 {
     protected $fillable = ['product_id', 'location_id', 'status'];
 

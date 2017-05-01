@@ -34,8 +34,8 @@ class Product extends Model
         return $this->belongsTo(Location::class);
     }
 
-    public function tranfers()
+    public function transfers()
     {
-        return $this->hasMany(Tranfer::class);
+        return $this->hasMany(Transfer::class);
     }
 }
