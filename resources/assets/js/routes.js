@@ -2,10 +2,10 @@
  * Created by Dark on 27/04/2017.
  */
 import Brands from './components/Brands/index.vue';
-//import Categories from './components/Categories/index.vue';
-//import Descriptions from './components/Descriptions/index.vue';
-//import Locations from '/components/Locations/index.vue';
-//import Manufactures from '/components/Manufactures/index.vue';
+import Categories from './components/Categories/index.vue';
+import Descriptions from './components/Descriptions/index.vue';
+import Locations from './components/Locations/index.vue';
+import Manufactures from './components/Manufactures/index.vue';
 
 
 export default [
@@ -16,22 +16,22 @@ export default [
     },
     {
         path: '/categories',
-        component: Brands,
+        component: Categories,
         name: 'categories'
     },
     {
         path: '/descriptions',
-        component: Brands,
+        component: Descriptions,
         name: 'descriptions'
     },
     {
         path: '/locations',
-        component: Brands,
+        component: Locations,
         name: 'locations'
     },
     {
         path: '/manufactures',
-        component: Brands,
+        component: Manufactures,
         name: 'manufactures'
     }
 

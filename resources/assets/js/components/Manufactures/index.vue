@@ -3,9 +3,9 @@
         <form id="search">
             <input type="text" class="form-control" placeholder="Search...." name="query" v-model="searchQuery" aria-describedby="basic-addon1">
         </form>
-        <div v-if="brands">
-            <demo-grid :data="brands"
-                       :columns="brandsColumns"
+        <div v-if="manufactures">
+            <demo-grid :data="manufactures"
+                       :columns="manufacturesColumns"
                        :filter-key="searchQuery">
 
             </demo-grid>
@@ -27,17 +27,17 @@
        data(){
            return{
                searchQuery: '',
-               brandsColumns: ['name'],
-               brands: []
+               manufacturesColumns: ['name'],
+               manufactures: []
            }
        },
        created(){
-           this.fetchbrands();
+           this.fetchmanufactures();
        },
        methods:{
-           fetchbrands(){
+           fetchmanufactures(){
                axios.get('api/manufactures')
-                   .then(response => this.brands = response.data.manufactures)
+                   .then(response => this.manufactures = response.data.manufactures)
            }
        }
    }
