@@ -17,6 +17,15 @@ php artisan make:model Manufacture -m
 php artisan make:model Location -m
 php artisan make:model Category -m
 ```
+Comandos Para los Seeders 
+```
+php artisan make:seeder ProductTableSeed
+php artisan make:seeder BrandTableSeed
+php artisan make:seeder ManufactureTableSeed
+php artisan make:seeder LocationTableSeed
+php artisan make:seeder CategoryTableSeed
+php artisan make:seeder DescriptionTableSeed
+```
 
 Comando para instalar vue:<br>
 
