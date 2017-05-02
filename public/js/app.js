@@ -32284,13 +32284,50 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "id": "app"
     }
-  }, [_vm._m(0), _vm._v(" "), _c('router-view')], 1)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nav', {
+  }, [_c('nav', {
     staticClass: "navbar navbar-default navbar-static-top"
   }, [_c('div', {
     staticClass: "container"
-  }, [_c('div', {
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "collapse navbar-collapse",
+    attrs: {
+      "id": "app-navbar-collapse"
+    }
+  }, [_c('ul', {
+    staticClass: "nav navbar-nav navbar-left"
+  }, [_vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": {
+        name: 'descriptions'
+      }
+    }
+  }, [_vm._v("Descriptions")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": {
+        name: 'brands'
+      }
+    }
+  }, [_vm._v("Model")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": {
+        name: 'manufactures'
+      }
+    }
+  }, [_vm._v("Manufactures")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": {
+        name: 'locations'
+      }
+    }
+  }, [_vm._v("Locations")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": {
+        name: 'categories'
+      }
+    }
+  }, [_vm._v("Categories")])], 1)])])])]), _vm._v(" "), _c('router-view')], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "navbar-header"
   }, [_c('button', {
     staticClass: "navbar-toggle collapse",
@@ -32309,14 +32346,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "icon-bar"
   })]), _vm._v(" "), _c('a', {
     staticClass: "navbar-brand"
-  }, [_vm._v("\n                    Inventory\n                ")])]), _vm._v(" "), _c('div', {
-    staticClass: "collapse navbar-collapse",
-    attrs: {
-      "id": "app-navbar-collapse"
-    }
-  }, [_c('ul', {
-    staticClass: "nav navbar-nav navbar-left"
-  }, [_c('li', [_c('a', [_vm._v("Create CFAT")])]), _vm._v(" "), _c('li', [_c('a', [_vm._v("Tech Items")])]), _vm._v(" "), _c('li', [_c('a', [_vm._v("Descriptions")])]), _vm._v(" "), _c('li', [_c('a', [_vm._v("Model")])]), _vm._v(" "), _c('li', [_c('a', [_vm._v("Manufactures")])]), _vm._v(" "), _c('li', [_c('a', [_vm._v("Locations")])]), _vm._v(" "), _c('li', [_c('a', [_vm._v("Categories")])])])])])])
+  }, [_vm._v("\n                    Inventory\n                ")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('a', [_vm._v("Create CFAT")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('a', [_vm._v("Tech Items")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

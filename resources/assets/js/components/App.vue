@@ -19,11 +19,11 @@
                      <ul class="nav navbar-nav navbar-left">
                         <li><a>Create CFAT</a></li>
                         <li><a>Tech Items</a></li>
-                        <li><a>Descriptions</a></li>
-                        <li><a>Model</a></li>
-                        <li><a>Manufactures</a></li>
-                        <li><a>Locations</a></li>
-                        <li><a>Categories</a></li>
+                        <li><router-link :to="{ name: 'descriptions'}">Descriptions</router-link></li>
+                        <li><router-link :to="{ name: 'brands'}">Model</router-link></li>
+                        <li><router-link :to="{ name: 'manufactures'}">Manufactures</router-link></li>
+                        <li><router-link :to="{ name: 'locations'}">Locations</router-link></li>
+                        <li><router-link :to="{ name: 'categories'}">Categories</router-link></li>
                     </ul>
                  </div>
             </div>

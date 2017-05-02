@@ -36,7 +36,7 @@
        },
        methods:{
            fetchbrands(){
-               axios.get('api/brands')
+               axios.get('api/products')
                    .then(response => this.brands = response.data.brands)
            }
        }
