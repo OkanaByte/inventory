@@ -17,10 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('brands', 'Api\BrandControllers');
-Route::resource('categories', 'Api\CategoryControllers');
-Route::resource('descriptions', 'Api\DescriptionControllers');
-Route::resource('locations', 'Api\LocationControllers');
-Route::resource('manufactures', 'Api\ManufactureControllers');
-Route::resource('products', 'Api\ProductControllers');
-Route::resource('tranfers', 'Api\TransferControllers');
+Route::resource('brands', 'Api\BrandControllers', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('categories', 'Api\CategoryControllers', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('descriptions', 'Api\DescriptionControllers', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('locations', 'Api\LocationControllers', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('manufactures', 'Api\ManufactureControllers', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('products', 'Api\ProductControllers', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
+Route::resource('tranfers', 'Api\TransferControllers', ['only' => ['index', 'store', 'update', 'destroy', 'show']]);
