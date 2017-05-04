@@ -76,5 +76,4 @@ export default [
         component: createProducts,
         name: 'createProducts'
     }
-
 ];
