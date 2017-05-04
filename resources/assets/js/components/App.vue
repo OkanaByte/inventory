@@ -18,7 +18,7 @@
                  <div class="collapse navbar-collapse" id="app-navbar-collapse">
                      <ul class="nav navbar-nav navbar-left">
                         <li><a>Create CFAT</a></li>
-                        <li><a>Tech Items</a></li>
+                        <li><router-link :to="{ name: 'products'}">Tech Items</router-link></li>
                         <li><router-link :to="{ name: 'descriptions'}">Descriptions</router-link></li>
                         <li><router-link :to="{ name: 'brands'}">Model</router-link></li>
                         <li><router-link :to="{ name: 'manufactures'}">Manufactures</router-link></li>
