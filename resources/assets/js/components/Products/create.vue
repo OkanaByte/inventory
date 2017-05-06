@@ -23,13 +23,13 @@
                                        <th>Manufacture</th>
                                        <th>Location</th>
                                        <th style="text-align: center;">
-                                           <a v-on="addRow" class="addRow">
+                                           <a v-on:click="addRow" class="addRow">
                                                <i class="glyphicon glyphicon-plus"></i>
                                            </a>
                                        </th>
                                    </thead> 
                                    <tbody>
-                                        <tr v-for="(addTd, index) in addRow">
+                                        <tr v-for="(addTd, index) in addRows">
                                             <td><input class="form-control" type="text" placeholder="serial" v-model="addTd.serial"/></td>
                                             <td>
                                                 <select class="form-control" v-model="addTd.status">
@@ -57,22 +57,22 @@
                                             </td>
                                             <td>
                                                 <select class="form-control" v-model="addTd.description">
-                                                    <option v-for="option in description" v-bind:value="option.id">
+                                                    <option v-for="option in descriptions" v-bind:value="option.id">
                                                         {{option.name}}
                                                     </option>
                                                 </select>
                                             </td>
                                             <td>
                                                 <select class="form-control" v-model="addTd.manufacture">
-                                                    <option v-for="option in manufacture" v-bind:value="option.id">
-                                                        {{option-name}}
+                                                    <option v-for="option in manufactures" v-bind:value="option.id">
+                                                        {{option.name}}
                                                     </option>
                                                 </select>
                                             </td>
                                             <!--location-->
                                             <td>
                                                 <select class="form-control" v-model="addTd.location">
-                                                    <option v-for="option in location" v-bind:vale="option.id">
+                                                    <option v-for="option in locations" v-bind:vale="option.id">
                                                         {{option.name}}
                                                     </option>
                                                 </select>
@@ -96,12 +96,13 @@
     export default {
         data(){
             return{
-                addRow: [],
-                brands: [],
-                categories: [],
-                products: [],
-                descriptions: [],
-                locations: []
+                addRows: [],
+                brands:[],
+                categories:[],
+                products:[],
+                descriptions:[],
+                manufactures:[],
+                locations:[]
             }
         },
         mounted() {
@@ -109,8 +110,8 @@
             this.fetchModel();
             this.fetchCategory();
             this.fetchDescriptions();
-            this.fetchManufatures();
-            this.fetchLocations();
+            this.fetchManufacture();
+            this.fetchLocation();
         },
         methods:{
             addRow(){
@@ -148,14 +149,14 @@
                     }
                 ))
             },
-            fetchManufatures: function(){
+            fetchManufacture: function(){
                 axios.get('../api/manufactures').then(response => this.manufactures = _.map(
                     response.data.manufactures, function(data){
                         return _.pick(data, 'name', 'id');
                     }
                 ))
             },
-            fetchLocations: function(){
+            fetchLocation: function(){
                 axios.get('../api/locations').then(response => this.locations = _.map(
                     response.data.locations, function(data){
                         return _.pick(data, 'name', 'id');
