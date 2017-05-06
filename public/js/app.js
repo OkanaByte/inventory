@@ -2571,10 +2571,170 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            addRow: [],
+            brands: [],
+            categories: [],
+            products: [],
+            descriptions: [],
+            locations: []
+        };
+    },
     mounted: function mounted() {
-        console.log('Component mounted.');
+        this.fetchProducts();
+        this.fetchModel();
+        this.fetchCategory();
+        this.fetchDescriptions();
+        this.fetchManufatures();
+        this.fetchLocations();
+    },
+
+    methods: {
+        addRow: function addRow() {
+            this.addRows.push({
+                serial: null,
+                status: null,
+                model: null,
+                category: null,
+                description: null,
+                manufacture: null,
+                location: null
+            });
+        },
+
+        fetchModel: function fetchModel() {
+            var _this = this;
+
+            axios.get('../api/brands').then(function (response) {
+                return _this.brands = _.map(response.data.brands, function (data) {
+                    return _.pick(data, 'name', 'id');
+                });
+            });
+        },
+        fetchCategory: function fetchCategory() {
+            var _this2 = this;
+
+            axios.get('../api/categories').then(function (response) {
+                return _this2.categories = _.map(response.data.categories, function (data) {
+                    return _.pick(data, 'name', 'id');
+                });
+            });
+        },
+        fetchProducts: function fetchProducts() {
+            var _this3 = this;
+
+            axios.get('../api/products').then(function (response) {
+                return _this3.products = response.data.products;
+            });
+        },
+        fetchDescriptions: function fetchDescriptions() {
+            var _this4 = this;
+
+            axios.get('../api/descriptions').then(function (response) {
+                return _this4.descriptions = _.map(response.data.descriptions, function (data) {
+                    return _.pick(data, 'name', 'id');
+                });
+            });
+        },
+        fetchManufatures: function fetchManufatures() {
+            var _this5 = this;
+
+            axios.get('../api/manufactures').then(function (response) {
+                return _this5.manufactures = _.map(response.data.manufactures, function (data) {
+                    return _.pick(data, 'name', 'id');
+                });
+            });
+        },
+        fetchLocations: function fetchLocations() {
+            var _this6 = this;
+
+            axios.get('../api/locations').then(function (response) {
+                return _this6.locations = _.map(response.data.locations, function (data) {
+                    return _.pick(data, 'name', 'id');
+                });
+            });
+        }
     }
 });
 
@@ -33805,21 +33965,207 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
   }, [_c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-10 col-md-offset-1"
   }, [_c('div', {
     staticClass: "panel panel-default"
   }, [_c('div', {
     staticClass: "panel-heading"
-  }, [_vm._v("Tech Items")]), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+  }, [_c('section', {
+    staticClass: "panel"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "panel panel-footer"
+  }, [_c('table', {
+    staticClass: "table table-bordered"
+  }, [_c('thead', [_c('th', [_vm._v("Serial")]), _vm._v(" "), _c('th', [_vm._v("Status")]), _vm._v(" "), _c('th', [_vm._v("Model")]), _vm._v(" "), _c('th', [_vm._v("Categories")]), _vm._v(" "), _c('th', [_vm._v("Description")]), _vm._v(" "), _c('th', [_vm._v("Manufacture")]), _vm._v(" "), _c('th', [_vm._v("Location")]), _vm._v(" "), _c('th', {
+    staticStyle: {
+      "text-align": "center"
+    }
+  }, [_c('a', {
+    directives: [{
+      name: "on",
+      rawName: "v-on",
+      value: (_vm.addRow),
+      expression: "addRow"
+    }],
+    staticClass: "addRow"
+  }, [_c('i', {
+    staticClass: "glyphicon glyphicon-plus"
+  })])])]), _vm._v(" "), _c('tbody', _vm._l((_vm.addRow), function(addTd, index) {
+    return _c('tr', [_vm._m(1, true), _vm._v(" "), _c('td', [_c('select', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (addTd.status),
+        expression: "addTd.status"
+      }],
+      staticClass: "form-control",
+      on: {
+        "change": function($event) {
+          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+            return o.selected
+          }).map(function(o) {
+            var val = "_value" in o ? o._value : o.value;
+            return val
+          });
+          addTd.status = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        }
+      }
+    }, [_c('option', {
+      attrs: {
+        "value": "1"
+      }
+    }, [_vm._v("\n                                                    Working\n                                                ")]), _vm._v(" "), _c('option', {
+      attrs: {
+        "value": "0"
+      }
+    }, [_vm._v("\n                                                    Defective\n                                                ")])])]), _vm._v(" "), _c('td', [_c('select', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (addTd.model),
+        expression: "addTd.model"
+      }],
+      staticClass: "form-control",
+      on: {
+        "change": function($event) {
+          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+            return o.selected
+          }).map(function(o) {
+            var val = "_value" in o ? o._value : o.value;
+            return val
+          });
+          addTd.model = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        }
+      }
+    }, _vm._l((_vm.brands), function(option) {
+      return _c('option', {
+        domProps: {
+          "value": option.id
+        }
+      }, [_vm._v("\n                                                    " + _vm._s(option.name) + "\n                                                ")])
+    }))]), _vm._v(" "), _c('td', [_c('select', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (addTd.category),
+        expression: "addTd.category"
+      }],
+      staticClass: "form-control",
+      on: {
+        "change": function($event) {
+          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+            return o.selected
+          }).map(function(o) {
+            var val = "_value" in o ? o._value : o.value;
+            return val
+          });
+          addTd.category = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        }
+      }
+    }, _vm._l((_vm.categories), function(option) {
+      return _c('option', {
+        domProps: {
+          "value": option.id
+        }
+      }, [_vm._v("\n                                                    " + _vm._s(option.name) + "\n                                                ")])
+    }))]), _vm._v(" "), _c('td', [_c('select', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (addTd.description),
+        expression: "addTd.description"
+      }],
+      staticClass: "form-control",
+      on: {
+        "change": function($event) {
+          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+            return o.selected
+          }).map(function(o) {
+            var val = "_value" in o ? o._value : o.value;
+            return val
+          });
+          addTd.description = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        }
+      }
+    }, _vm._l((_vm.description), function(option) {
+      return _c('option', {
+        domProps: {
+          "value": option.id
+        }
+      }, [_vm._v("\n                                                    " + _vm._s(option.name) + "\n                                                ")])
+    }))]), _vm._v(" "), _c('td', [_c('select', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (addTd.manufacture),
+        expression: "addTd.manufacture"
+      }],
+      staticClass: "form-control",
+      on: {
+        "change": function($event) {
+          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+            return o.selected
+          }).map(function(o) {
+            var val = "_value" in o ? o._value : o.value;
+            return val
+          });
+          addTd.manufacture = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        }
+      }
+    }, _vm._l((_vm.manufacture), function(option) {
+      return _c('option', {
+        domProps: {
+          "value": option.id
+        }
+      }, [_vm._v("\n                                                    " + _vm._s(option - _vm.name) + "\n                                                ")])
+    }))]), _vm._v(" "), _c('td', [_c('select', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (addTd.location),
+        expression: "addTd.location"
+      }],
+      staticClass: "form-control",
+      on: {
+        "change": function($event) {
+          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+            return o.selected
+          }).map(function(o) {
+            var val = "_value" in o ? o._value : o.value;
+            return val
+          });
+          addTd.location = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        }
+      }
+    }, _vm._l((_vm.location), function(option) {
+      return _c('option', {
+        attrs: {
+          "vale": option.id
+        }
+      }, [_vm._v("\n                                                    " + _vm._s(option.name) + "\n                                                ")])
+    }))]), _vm._v(" "), _c('td')])
+  }))])])])])])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "panel-footer"
+  }, [_c('header', {
+    staticClass: "panel panel-default"
+  }, [_c('h3', [_vm._v("Create Tech Item")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('td', [_c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "serial"
+    }
+  })])
 }]}
 module.exports.render._withStripped = true
 if (false) {
