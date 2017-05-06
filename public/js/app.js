@@ -2649,6 +2649,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -2672,9 +2675,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
+        addSerial: function addSerial() {
+            var addRows = _.map(this.addRows, function (num) {
+                return _.pick(num, 'quantity', 'serial', 'manufacture', 'description', 'location', 'category', 'model', 'status');
+            });
+            axios.post('../api/products', { products: addRows }).then(function (response) {
+                console.log(response.data);
+            });
+        },
         addRow: function addRow() {
             this.addRows.push({
                 serial: null,
+                quantity: null,
                 status: null,
                 model: null,
                 category: null,
@@ -33984,7 +33996,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel panel-footer"
   }, [_c('table', {
     staticClass: "table table-bordered"
-  }, [_c('thead', [_c('th', [_vm._v("Serial")]), _vm._v(" "), _c('th', [_vm._v("Status")]), _vm._v(" "), _c('th', [_vm._v("Model")]), _vm._v(" "), _c('th', [_vm._v("Categories")]), _vm._v(" "), _c('th', [_vm._v("Description")]), _vm._v(" "), _c('th', [_vm._v("Manufacture")]), _vm._v(" "), _c('th', [_vm._v("Location")]), _vm._v(" "), _c('th', {
+  }, [_c('thead', [_c('th', [_vm._v("Serial")]), _vm._v(" "), _c('th', [_vm._v("Quantity")]), _vm._v(" "), _c('th', [_vm._v("Status")]), _vm._v(" "), _c('th', [_vm._v("Model")]), _vm._v(" "), _c('th', [_vm._v("Categories")]), _vm._v(" "), _c('th', [_vm._v("Description")]), _vm._v(" "), _c('th', [_vm._v("Manufacture")]), _vm._v(" "), _c('th', [_vm._v("Location")]), _vm._v(" "), _c('th', {
     staticStyle: {
       "text-align": "center"
     }
@@ -34015,6 +34027,27 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "input": function($event) {
           if ($event.target.composing) { return; }
           addTd.serial = $event.target.value
+        }
+      }
+    })]), _vm._v(" "), _c('td', [_c('input', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (addTd.quantity),
+        expression: "addTd.quantity"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        "type": "text",
+        "placeholder": "quantity"
+      },
+      domProps: {
+        "value": (addTd.quantity)
+      },
+      on: {
+        "input": function($event) {
+          if ($event.target.composing) { return; }
+          addTd.quantity = $event.target.value
         }
       }
     })]), _vm._v(" "), _c('td', [_c('select', {
@@ -34165,12 +34198,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }, _vm._l((_vm.locations), function(option) {
       return _c('option', {
-        attrs: {
-          "vale": option.id
+        domProps: {
+          "value": option.id
         }
       }, [_vm._v("\n                                                    " + _vm._s(option.name) + "\n                                                ")])
     }))]), _vm._v(" "), _c('td')])
-  }))])])])])])])])])
+  }))]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-primary pull-right",
+    on: {
+      "click": _vm.addSerial
+    }
+  }, [_vm._v("Add Serial")])])])])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "panel-footer"

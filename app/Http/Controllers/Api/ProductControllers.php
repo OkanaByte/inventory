@@ -55,8 +55,24 @@ class ProductControllers extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    { 
+       // dd($request->products);
+        
+        foreach ($request->products as $key => $value){
+            Product::updateOrCreate(
+                ['serial' => $request->input('products.'.$key.'.serial')],
+               [
+                   'serial' => $request->input('products.'.$key.'.serial'),
+                   'quantity' => $request->input('products.'.$key.'.quantity'),
+                   'manufacture_id' => $request->input('products.'.$key.'.manufacture'),
+                   'description_id' => $request->input('products.'.$key.'.description'),
+                   'location_id' => $request->input('products.'.$key.'.location'),
+                   'category_id' => $request->input('products.'.$key.'.category'),
+                   'brand_id' => $request->input('products.'.$key.'.model'),
+                   'status' => $request->input('products.'.$key.'.status')
+                ]
+            );
+        }
     }
 
     /**

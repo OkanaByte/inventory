@@ -16,6 +16,7 @@
                                <table class="table table-bordered">
                                    <thead>
                                        <th>Serial</th>
+                                       <th>Quantity</th>
                                        <th>Status</th>
                                        <th>Model</th>
                                        <th>Categories</th>
@@ -31,6 +32,7 @@
                                    <tbody>
                                         <tr v-for="(addTd, index) in addRows">
                                             <td><input class="form-control" type="text" placeholder="serial" v-model="addTd.serial"/></td>
+                                            <td><input class="form-control" type="text" placeholder="quantity" v-model="addTd.quantity"/></td>
                                             <td>
                                                 <select class="form-control" v-model="addTd.status">
                                                     <option value="1">
@@ -72,7 +74,7 @@
                                             <!--location-->
                                             <td>
                                                 <select class="form-control" v-model="addTd.location">
-                                                    <option v-for="option in locations" v-bind:vale="option.id">
+                                                    <option v-for="option in locations" v-bind:value="option.id">
                                                         {{option.name}}
                                                     </option>
                                                 </select>
@@ -81,8 +83,9 @@
                                                 <!-- button -->
                                             </td>
                                         </tr>
-                                   </tbody>                                  
+                                   </tbody>                                                                
                                </table>
+                                <button class="btn btn-primary pull-right" @click="addSerial">Add Serial</button> 
                            </div>
                        </section>
                    </div>
@@ -114,9 +117,18 @@
             this.fetchLocation();
         },
         methods:{
+            addSerial: function(){
+                var addRows = _.map(this.addRows, function(num){
+                    return _.pick(num, 'quantity', 'serial', 'manufacture', 'description', 'location', 'category', 'model', 'status')
+                })
+                  axios.post('../api/products', {products: addRows}).then(response => {
+                      console.log(response.data)
+                  })         
+            },
             addRow(){
                 this.addRows.push({
                     serial:null,
+                    quantity:null,
                     status:null,
                     model:null,
                     category:null,
