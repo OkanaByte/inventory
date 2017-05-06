@@ -16,7 +16,22 @@ class ProductControllers extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at', 'desc')->get();
+        $products = Product::with(['location' => function($query){
+            $query->select(['id', 'name']);
+        }, 
+        'manufacture'=> function($query){
+            $query->select(['id', 'name']);
+        }, 
+        'description'=> function($query){
+            $query->select(['id', 'name']);
+        }, 
+        'category'=> function($query){
+            $query->select(['id', 'name']);
+        }, 
+        'brand'=> function($query){
+            $query->select(['id', 'name']);
+        }])
+        ->orderBy('created_at', 'desc')->get();
 
         return response()->json([
             'products' => $products

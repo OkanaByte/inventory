@@ -27,7 +27,7 @@
        data(){
            return{
                searchQuery: '',
-               productsColumns: ['serial', 'quantity'],
+               productsColumns: ['serial', 'quantity', 'category', 'description', 'location', 'manufacture', 'model'],
                products: []
            }
        },
@@ -37,7 +37,21 @@
        methods:{
            fetchproducts(){
                axios.get('api/products')
-                   .then(response => this.products = response.data.products)
+                   .then(response => this.products = _.map(response.data.products,
+                   function(num){
+                       var pick = _.pick(num, 'quantity','serial','manufacture.name', 'description.name', 'location.name', 'category.name', 'brand.name', 'status');
+                       var objectProduct = {
+                           quantity:pick.quantity,
+                           serial:pick.serial,
+                           manufacture:pick.manufacture.name,
+                           description:pick.description.name,
+                           location:pick.location.name,
+                           category:pick.category.name,
+                           model:pick.brand.name,
+                           status:status
+                      }
+                return objectProduct
+             }))
            }
        }
    }
