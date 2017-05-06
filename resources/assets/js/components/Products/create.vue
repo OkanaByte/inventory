@@ -122,7 +122,7 @@
                     return _.pick(num, 'quantity', 'serial', 'manufacture', 'description', 'location', 'category', 'model', 'status')
                 })
                   axios.post('../api/products', {products: addRows}).then(response => {
-                      console.log(response.data)
+                      this.$router.push({name:'products'})
                   })         
             },
             addRow(){
