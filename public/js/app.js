@@ -2676,11 +2676,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         addSerial: function addSerial() {
+            var _this = this;
+
             var addRows = _.map(this.addRows, function (num) {
                 return _.pick(num, 'quantity', 'serial', 'manufacture', 'description', 'location', 'category', 'model', 'status');
             });
             axios.post('../api/products', { products: addRows }).then(function (response) {
-                console.log(response.data);
+                _this.$router.push({ name: 'products' });
             });
         },
         addRow: function addRow() {
@@ -2697,53 +2699,53 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
 
         fetchModel: function fetchModel() {
-            var _this = this;
+            var _this2 = this;
 
             axios.get('../api/brands').then(function (response) {
-                return _this.brands = _.map(response.data.brands, function (data) {
+                return _this2.brands = _.map(response.data.brands, function (data) {
                     return _.pick(data, 'name', 'id');
                 });
             });
         },
         fetchCategory: function fetchCategory() {
-            var _this2 = this;
+            var _this3 = this;
 
             axios.get('../api/categories').then(function (response) {
-                return _this2.categories = _.map(response.data.categories, function (data) {
+                return _this3.categories = _.map(response.data.categories, function (data) {
                     return _.pick(data, 'name', 'id');
                 });
             });
         },
         fetchProducts: function fetchProducts() {
-            var _this3 = this;
+            var _this4 = this;
 
             axios.get('../api/products').then(function (response) {
-                return _this3.products = response.data.products;
+                return _this4.products = response.data.products;
             });
         },
         fetchDescriptions: function fetchDescriptions() {
-            var _this4 = this;
+            var _this5 = this;
 
             axios.get('../api/descriptions').then(function (response) {
-                return _this4.descriptions = _.map(response.data.descriptions, function (data) {
+                return _this5.descriptions = _.map(response.data.descriptions, function (data) {
                     return _.pick(data, 'name', 'id');
                 });
             });
         },
         fetchManufacture: function fetchManufacture() {
-            var _this5 = this;
+            var _this6 = this;
 
             axios.get('../api/manufactures').then(function (response) {
-                return _this5.manufactures = _.map(response.data.manufactures, function (data) {
+                return _this6.manufactures = _.map(response.data.manufactures, function (data) {
                     return _.pick(data, 'name', 'id');
                 });
             });
         },
         fetchLocation: function fetchLocation() {
-            var _this6 = this;
+            var _this7 = this;
 
             axios.get('../api/locations').then(function (response) {
-                return _this6.locations = _.map(response.data.locations, function (data) {
+                return _this7.locations = _.map(response.data.locations, function (data) {
                     return _.pick(data, 'name', 'id');
                 });
             });
