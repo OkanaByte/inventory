@@ -1,33 +1,27 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Brands</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Brands</div>
     
-                    <div class="panel-body">
-                        <table id="example" class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th v-for="key in columns" @click="sortBy(key)" :class="{active: sortKey == key}">
-                                        {{ key | capitalize}}
-                                        <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
+        <div class="panel-body">
+            <table id="example" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th v-for="key in columns" @click="sortBy(key)" :class="{active: sortKey == key}">
+                            {{ key | capitalize}}
+                            <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
     
                             </span>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="entry in filteredData">
-                                    <th v-for="key in columns">
-                                        {{ entry[key]}}
-                                    </th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="entry in filteredData">
+                        <th v-for="key in columns">
+                            {{ entry[key]}}
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </template>

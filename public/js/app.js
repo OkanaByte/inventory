@@ -2083,6 +2083,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2148,6 +2150,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue__);
+//
+//
 //
 //
 //
@@ -2253,6 +2257,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2287,12 +2293,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2436,6 +2436,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2501,6 +2503,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue__);
+//
+//
 //
 //
 //
@@ -2761,6 +2765,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Filtering_Filter_vue__);
+//
+//
 //
 //
 //
@@ -5351,49 +5357,49 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 55 */
@@ -33408,10 +33414,14 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('form', {
-    attrs: {
-      "id": "search"
-    }
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "form-group"
   }, [_c('input', {
     directives: [{
       name: "model",
@@ -33441,7 +33451,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "columns": _vm.productsColumns,
       "filter-key": _vm.searchQuery
     }
-  })], 1) : _c('div', [_vm._v("\n        Loading......!\n    ")])])
+  })], 1) : _c('div', [_vm._v("\n                Loading......!\n            ")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -33485,10 +33495,14 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('form', {
-    attrs: {
-      "id": "search"
-    }
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "form-group"
   }, [_c('input', {
     directives: [{
       name: "model",
@@ -33518,7 +33532,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "columns": _vm.categoriesColumns,
       "filter-key": _vm.searchQuery
     }
-  })], 1) : _c('div', [_vm._v("\n        Loading......!\n    ")])])
+  })], 1) : _c('div', [_vm._v("\n                Loading......!\n            ")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -33591,10 +33605,14 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('form', {
-    attrs: {
-      "id": "search"
-    }
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "form-group"
   }, [_c('input', {
     directives: [{
       name: "model",
@@ -33624,7 +33642,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "columns": _vm.manufacturesColumns,
       "filter-key": _vm.searchQuery
     }
-  })], 1) : _c('div', [_vm._v("\n        Loading......!\n    ")])])
+  })], 1) : _c('div', [_vm._v("\n                Loading......!\n            ")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -33729,12 +33747,6 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "container"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
-  }, [_c('div', {
     staticClass: "panel panel-default"
   }, [_c('div', {
     staticClass: "panel-heading"
@@ -33755,15 +33767,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           _vm.sortBy(key)
         }
       }
-    }, [_vm._v("\n                                    " + _vm._s(_vm._f("capitalize")(key)) + "\n                                    "), _c('span', {
+    }, [_vm._v("\n                        " + _vm._s(_vm._f("capitalize")(key)) + "\n                        "), _c('span', {
       staticClass: "arrow",
       class: _vm.sortOrders[key] > 0 ? 'asc' : 'dsc'
     })])
   }))]), _vm._v(" "), _c('tbody', _vm._l((_vm.filteredData), function(entry) {
     return _c('tr', _vm._l((_vm.columns), function(key) {
-      return _c('th', [_vm._v("\n                                    " + _vm._s(entry[key]) + "\n                                ")])
+      return _c('th', [_vm._v("\n                        " + _vm._s(entry[key]) + "\n                    ")])
     }))
-  }))])])])])])])
+  }))])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -33778,10 +33790,14 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('form', {
-    attrs: {
-      "id": "search"
-    }
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "form-group"
   }, [_c('input', {
     directives: [{
       name: "model",
@@ -33811,7 +33827,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "columns": _vm.brandsColumns,
       "filter-key": _vm.searchQuery
     }
-  })], 1) : _c('div', [_vm._v("\n        Loading......!\n    ")])])
+  })], 1) : _c('div', [_vm._v("\n                Loading......!\n            ")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -33884,10 +33900,14 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('form', {
-    attrs: {
-      "id": "search"
-    }
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "form-group"
   }, [_c('input', {
     directives: [{
       name: "model",
@@ -33917,7 +33937,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "columns": _vm.descriptionsColumns,
       "filter-key": _vm.searchQuery
     }
-  })], 1) : _c('div', [_vm._v("\n        Loading......!\n    ")])])
+  })], 1) : _c('div', [_vm._v("\n                Loading......!\n            ")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -33932,10 +33952,14 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('form', {
-    attrs: {
-      "id": "search"
-    }
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "form-group"
   }, [_c('input', {
     directives: [{
       name: "model",
@@ -33965,7 +33989,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "columns": _vm.locationsColumns,
       "filter-key": _vm.searchQuery
     }
-  })], 1) : _c('div', [_vm._v("\n        Loading......!\n    ")])])
+  })], 1) : _c('div', [_vm._v("\n                Loading......!\n            ")])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

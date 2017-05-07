@@ -21,6 +21,7 @@
   "dependencies": {
     "babel": "^6.23.0",
     "cross-env": "^3.2.3",
+    "v-hotkey": "^0.1.2",
     "vue-router": "^2.5.2"
   }
 }
