@@ -16,10 +16,12 @@ window.Vue = require('vue');
  */
 
 import VueRouter from "vue-router";
+import VueHotkey from 'v-hotkey';
 import routes from './routes.js';
 import App from './components/App.vue';
 
 Vue.use(VueRouter);
+Vue.use(VueHotkey);
 
 const router = new VueRouter({
     mode: 'history',

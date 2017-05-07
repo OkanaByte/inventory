@@ -24,7 +24,7 @@
                                        <th>Manufacture</th>
                                        <th>Location</th>
                                        <th style="text-align: center;">
-                                           <a v-on:click="addRow" class="addRow">
+                                           <a v-hotkey="addTd" v-on:click="addRow" class="addRow">
                                                <i class="glyphicon glyphicon-plus"></i>
                                            </a>
                                        </th>
@@ -80,7 +80,9 @@
                                                 </select>
                                             </td>
                                             <td>
-                                                <!-- button -->
+                                                <button @click.prevent="addRows.splice(index, 1)" class="btn btn-sm btn-danger">
+                                                    <i class="glyphicon glyphicon-remove"></i>
+                                                </button>
                                             </td>
                                         </tr>
                                    </tbody>                                                                
@@ -116,7 +118,18 @@
             this.fetchManufacture();
             this.fetchLocation();
         },
+        computed:{
+            addTd(){
+                return {
+                    enter : this.addRow,
+                    esc : this.deleteRow
+                }
+            },
+        },
         methods:{
+            deleteRow(){
+                this.addRows.pop()
+            },
             addSerial: function(){
                 var addRows = _.map(this.addRows, function(num){
                     return _.pick(num, 'quantity', 'serial', 'manufacture', 'description', 'location', 'category', 'model', 'status')
