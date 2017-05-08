@@ -33,5 +33,6 @@ Comando para instalar vue:<br>
 npm install
 nom install vue-router -save
 npm instal cross-env
+npm install --save v-hotkey
 ``` 
 <br>
